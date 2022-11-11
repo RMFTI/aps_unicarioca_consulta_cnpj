@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o CNPJ da Empresa"
+        android:id="@+id/cnpj"
+        android:textSize="20sp"
+        android:maxLength="14"/>
+
     <Button
-        android:id="@+id/bt_consultar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Consultar"
-        android:visibility="visible"
-        app:backgroundTint="#FF9800"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        android:id="@+id/btnConsulta"
+        android:layout_gravity="center"
+        app:backgroundTint="#FF9800"/>
 
-    <EditText
-        android:id="@+id/number_cnpj2"
-        android:layout_width="449dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:hint="Digite o CNPJ da empresa"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        android:textColorHighlight="#FF9800"
-        android:textColorLink="#FF9800"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/bt_consultar2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759"
-        tools:visibility="visible" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/result_tv"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
